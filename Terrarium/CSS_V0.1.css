@@ -1,0 +1,171 @@
+html, body{
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-size: 10px;
+  /*background-image: linear-gradient(to top, white 0%, black 50%);
+  background-image: linear-gradient(to right, white 0%, black 50%);
+  background-image: linear-gradient(45deg, white 0%, black 50%);*/
+  /*background-image:linear-gradient(90deg, purple, blue,cyan,green, yellow, red, black);*/
+  background-image: url(../img/Sahara-Wüste.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.page{
+  width:100%;
+  display: grid;
+  grid-template-rows: 2rem 80vh 20rem;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 1rem;
+  grid-template-areas:
+    "header header header "
+    "inhalt inhalt inhalt"
+    "footer footer footer"
+}
+
+.header{
+  text-align:start;
+  font-size:2em;
+  color:black;
+  justify-content:space-evenly;
+  nav{
+  height: 90px;
+  width: 100%;
+  background-color: royalblue;
+
+  box-shadow: 0px 2px 4px rgba(0,0,0,0.144);
+}
+
+nav ul
+{
+ float: left;
+}
+
+nav li
+{
+  display: inline-block;
+  margin-top: 30px;
+  margin-right: 40px;
+}
+
+nav li a
+{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 24px;
+  color: #333;
+  text-decoration: none;
+}
+
+nav ul li .aktiv
+{
+color: red;
+}
+
+}
+
+.wrapper{
+    grid-area:inhalt;
+    width: 90vw;
+    height: 90vh;
+    margin: 5vh auto 5vh auto;
+    display: grid;
+    grid-template-rows: 25% 25% 25% 25%;
+    grid-template-columns:25% 25% 25% 25%;
+    grid-gap: 0.7rem;
+    grid-template-areas:
+      "box1 box1 box2 box2"
+      "box1 box1 box3 box3"
+      "box4 box4 box5 box5"
+      "box6 box6 box5 box5"
+  }
+
+.wrapper .grid-box{
+    background-image:  linear-gradient(hsla(215,30%,70%,0.9) 0%,                   hsla(215,30%,70%,0) 50%, hsla(215,30%,70%,0.9) 100%), 
+    linear-gradient(to right, hsla(215,30%,80%,0.8) 30%, white 50%,                 hsla(215,30%,80%,0.8) 70%);
+    transition: all 250ms;
+    font-size: 5rem;
+    color: white;
+    font-family: sans-serif;
+    box-shadow: 0 0.1rem 0.3rem rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    animation: fadein 0.4s ease-out normal backwards;
+
+    
+  }
+
+.wrapper .grid-box:hover{
+  z-index: 2;
+  position: relative;
+  box-shadow: 0 1.5rem 2.8rem rgba(0,0,0,0.15), 0 1rem 1rem rgba(0,0,0,0.15);
+  transform: translate(0,-0.0.5rem) scale(1.01);
+}
+
+.wrapper .element1{grid-area:box1; animation-delay:0;}  
+.wrapper .element2{grid-area:box2;animation-delay:100ms;}  
+.wrapper .element3{grid-area:box3;animation-delay:200ms;}  
+.wrapper .element4{grid-area:box4;animation-delay:100ms;}  
+.wrapper .element5{grid-area:box5;animation-delay:200ms;}  
+.wrapper .element6{grid-area:box6;animation-delay:300ms;}
+
+@keyframes fadein{
+  0% {transform: scale(0);}
+  80%{transform: scale(1.1);}
+  100% {transform: scale(1);}
+}
+
+.wrapper .element2 .queue
+{
+display: flex;
+align-items: center;
+justify-content: center;
+color: black;
+}
+.wrapper .element3 .queue
+{
+display: flex;
+align-items: center;
+justify-content: center;
+color: black;
+}
+
+.wrapper .element5 
+{
+  background-image: url(../img/Pokemon.jpg);
+  background-size: cover;
+}
+/*-------------------------------------------------------------------------------------------------------------------*/
+/*Feuchtigkeit*/
+nav{
+  height: 90px;
+  width: 100%;
+  background-color: royalblue;
+
+  box-shadow: 0px 2px 4px rgba(0,0,0,0.144);
+}
+
+nav ul
+{
+ float: left;
+}
+
+nav li
+{
+  display: inline-block;
+  margin-top: 30px;
+  margin-right: 40px;
+}
+
+nav li a
+{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 24px;
+  color: #333;
+  text-decoration: none;
+}
+
+nav ul li .aktiv
+{
+color: red;
+}
+
